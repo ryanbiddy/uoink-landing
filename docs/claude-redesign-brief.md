@@ -2,6 +2,8 @@
 
 This brief exists so Claude Code can redesign the entire Yoink website with creative range while still protecting the product truth, conversion goals, agent discoverability, and deployment surface.
 
+Update: the public brand direction is now Uoink. Read [uoink-rename-plan.md](uoink-rename-plan.md) before designing. Treat Uoink as the new public brand and Yoink as the current technical/product lineage.
+
 ## What We Are Trying To Do
 
 The current site contains the right facts, but it still reads too much like a product launch page assembled from sections. The redesign should make the site feel more authored, more memorable, and more visually confident.
@@ -10,7 +12,7 @@ The site should still convert. It should not become art direction at the expense
 
 The highest-level goal:
 
-> Make Yoink feel like a serious, indie-built research tool with taste.
+> Make Uoink feel like a serious, indie-built research tool with taste.
 
 It should not feel like every other AI-generated SaaS website.
 
@@ -34,7 +36,7 @@ There are three user groups. The homepage should serve all three, and each audie
 
 ## Product Truth
 
-Yoink v2 has three paths:
+Uoink, formerly Yoink, has three paths:
 
 1. Browser path
    - Click Yoink on a YouTube video.
@@ -192,6 +194,15 @@ Must include:
 - Plain description of local server behavior
 
 ## Creative Direction
+
+Use the Uoink Brand System v3 direction as the north star:
+
+- Cream/paper/ink/vermillion/acid palette
+- Magnet-U wordmark concept
+- Bungee wordmark, Fraunces display, Instrument Serif italic, Inter body, JetBrains Mono UI
+- Heist-poster/editorial-print system
+- Strong borders, strips, stamps, numbered panels, address-bar/domain details
+- Less generic dark SaaS; more authored product artifact
 
 Claude has permission to change:
 
@@ -353,11 +364,13 @@ Use this prompt when starting the redesign session:
 ```text
 You are redesigning the Yoink landing site in this repo.
 
-Read CLAUDE.md first, then docs/claude-redesign-brief.md, then docs/brand-style-guide.md.
+Read CLAUDE.md first, then docs/uoink-rename-plan.md, then docs/claude-redesign-brief.md, then docs/brand-style-guide.md.
 
-I want a full-site redesign, not a homepage polish pass. Give the site creative taste and make it feel human-made, editorial, and memorable rather than like a generic AI/SaaS template.
+I want a full-site redesign and public rename to Uoink, not a homepage polish pass. Give the site creative taste and make it feel human-made, editorial, and memorable rather than like a generic AI/SaaS template.
 
-Keep the product truth: Yoink v2 is Windows now, Mac in v2.1, Chrome Web Store pending, GitHub Releases direct download, local helper + extension, 13 MCP tools, Operator Skill, local-first privacy, Claude and ChatGPT paste flow, and agent-native MCP flow.
+Keep the product truth: Uoink is the new public brand for the Yoink product. v2 is Windows now, Mac in v2.1, Chrome Web Store pending, GitHub Releases direct download, local helper + extension, 13 MCP tools, Operator Skill, local-first privacy, Claude and ChatGPT paste flow, and agent-native MCP flow.
+
+Important: do not rename current technical MCP identifiers from yoink_* to uoink_* unless the product repo has shipped aliases. The public brand can say Uoink while agent docs remain technically accurate.
 
 Creators are the primary audience. Agents are the moat. Keep agent content visible and crawlable, but make the homepage cleaner and more human.
 
@@ -380,4 +393,3 @@ You may change layout, visual motifs, component structure, section order, typogr
 
 Run npm run lint and npm run build before you finish. Leave a clear summary of what changed, screenshots or viewport notes, and any TODOs for Codex/Ryan.
 ```
-

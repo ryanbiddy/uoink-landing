@@ -1,14 +1,20 @@
-# Yoink Brand Style Guide
+# Uoink Brand Style Guide
 
-This guide documents the current Yoink landing-page brand system. It is meant to keep future pages, docs, launch assets, and product screenshots consistent with the v2 launch site.
+This guide documents the current Uoink landing-page brand system. Uoink is the public rename of the Yoink product. It is meant to keep future pages, docs, launch assets, and product screenshots consistent with the new brand direction.
+
+For rename-specific migration notes, read [uoink-rename-plan.md](uoink-rename-plan.md).
 
 ## Brand Position
 
-Yoink is a local-first YouTube research layer for creators, researchers, and AI agents.
+Uoink is a local-first YouTube research layer for creators, researchers, and AI agents.
 
 Core line:
 
 > Your YouTube bookmark for LLMs and agents.
+
+New brand line:
+
+> Uoink any video. Read it like a doc.
 
 Conversion line:
 
@@ -16,7 +22,7 @@ Conversion line:
 
 Short product explanation:
 
-Yoink turns YouTube videos into structured local corpora that can be pasted into Claude and ChatGPT or called directly by MCP-compatible agents.
+Uoink turns YouTube videos into structured local corpora that can be pasted into Claude and ChatGPT or called directly by MCP-compatible agents.
 
 ## Brand Personality
 
@@ -39,15 +45,20 @@ Avoid:
 
 ## Color System
 
+The Uoink v3 direction replaces the previous dark-only palette with a warm print system.
+
 Primary colors:
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Yoink Black | `#0A0A0A` | Page background, footer, dark cards |
-| Yoink Orange | `#EA580C` | Eyebrows, CTAs, rules, active states, key phrases |
-| White | `#FFFFFF` | Headlines, primary text on dark |
-| Ash | `#A3A3A3` | Body copy, secondary text |
-| Panel | `#141414` | Dark card surfaces and mockups |
+| Ink | `#0A0A0A` | Primary text, dark surfaces |
+| Ink Warm | `#15110D` | Warm dark panels |
+| Vermillion | `#FF3D00` | Primary brand accent |
+| Acid | `#FFD23F` | Signal color, magnet tips, stamps |
+| Cream | `#FFF4EC` | Primary light background |
+| Paper | `#F4EFE6` | Secondary paper background |
+| Oxblood | `#7A1A00` | Deep warm accent |
+| Muted | `#5B5650` | Secondary text on light backgrounds |
 
 Implementation:
 
@@ -65,12 +76,20 @@ Color rules:
 
 ## Typography
 
+Wordmark font:
+
+- `Bungee`
+- Used only for the Uoink wordmark or very deliberate brand moments.
+
 Display font:
 
+- `Fraunces`
+- Used for major headlines and editorial section titles.
+
+Editorial italic:
+
 - `Instrument Serif`
-- Used for major headlines, card titles, hero type, and editorial section titles.
-- Current loaded weight: `400`
-- Keep line-height tight for large type.
+- Used for italic emphasis inside display headlines.
 
 Body font:
 
@@ -79,12 +98,12 @@ Body font:
 
 Mono font:
 
-- System mono stack
+- `JetBrains Mono`
 - Used for code snippets, MCP tool names, filenames, config examples, and technical identifiers.
 
 Typography rules:
 
-- Headlines should feel editorial and oversized.
+- Headlines should feel editorial, oversized, and print-system sharp.
 - Body copy should be plain, readable, and specific.
 - Eyebrows are all caps, small, tracked, and orange.
 - Buttons are all caps, compact, and high contrast.
@@ -95,15 +114,13 @@ Typography rules:
 
 Logo assets live in [public](../public):
 
-- `logo.png`
-- `logo-dark.png`
-- `logo-color.png`
-- `logo-mark.png`
-- `logo-mark-color.png`
+- Legacy Yoink assets currently live in `public/`.
+- New Uoink assets should include the magnet-U mark and Bungee wordmark.
 
 Usage:
 
-- Use `logo-mark-color.png` for the current dark landing page header and footer.
+- Use the magnet-U wordmark once exported.
+- Until new assets are committed, do not stretch or mutate legacy Yoink assets to fake Uoink.
 - Use the full lockup only when space allows and the page needs stronger brand recognition.
 - Keep generous clear space around the mark.
 - Do not recolor, stretch, crop, rotate, or add effects to the logo.
@@ -111,14 +128,16 @@ Usage:
 
 ## Layout System
 
-The site uses a dark editorial rhythm:
+The new site should use a warm print/editorial rhythm:
 
-- Full-width black sections
-- Large serif headings
-- Orange eyebrow labels
-- Thin bordered cards
-- Diagonal stripe dividers between sections
-- High vertical spacing
+- Cream/paper fields
+- Ink borders
+- Vermillion panels
+- Acid yellow stamps and magnet tips
+- Dark product/demo panels
+- Large Fraunces headlines
+- Bungee wordmark
+- JetBrains Mono strips and labels
 
 Page sections should feel sparse. Empty space is part of the design.
 
@@ -338,15 +357,20 @@ Do not:
 ## Quick Reference
 
 ```text
-Background: #0A0A0A
-Accent:     #EA580C
-Text:       #FFFFFF
-Muted:      #A3A3A3
-Panel:      #141414
+Ink:        #0A0A0A
+Ink Warm:   #15110D
+Vermillion: #FF3D00
+Acid:       #FFD23F
+Cream:      #FFF4EC
+Paper:      #F4EFE6
+Oxblood:    #7A1A00
+Muted:      #5B5650
 
-Display:    Instrument Serif
+Wordmark:   Bungee
+Display:    Fraunces
+Italic:     Instrument Serif
 Body:       Inter
-Mono:       system monospace
+Mono:       JetBrains Mono
 
 Primary CTA: Download for Windows
 Agent CTA:   text link or secondary route

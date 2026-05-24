@@ -1,6 +1,6 @@
-# Yoink Landing
+# Uoink Landing
 
-Landing page for Yoink v2, the YouTube layer for Claude, ChatGPT, and local AI agents.
+Landing page for Uoink, formerly Yoink: the YouTube layer for Claude, ChatGPT, and local AI agents.
 
 ## Development
 
@@ -13,10 +13,13 @@ The site is built with Next.js 14, TypeScript, and Tailwind CSS for Vercel.
 
 ## Brand
 
-The Yoink brand style guide lives at
+The Uoink brand style guide lives at
 [docs/brand-style-guide.md](docs/brand-style-guide.md). Use it for colors,
 typography, logo usage, voice, CTA hierarchy, screenshot rules, and SEO/GEO
 guidance before adding new pages or launch assets.
+
+Rename and migration notes live at
+[docs/uoink-rename-plan.md](docs/uoink-rename-plan.md).
 
 ## Search and GEO basics
 
