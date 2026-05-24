@@ -11,6 +11,13 @@ npm run dev
 
 The site is built with Next.js 14, TypeScript, and Tailwind CSS for Vercel.
 
+## Brand
+
+The Yoink brand style guide lives at
+[docs/brand-style-guide.md](docs/brand-style-guide.md). Use it for colors,
+typography, logo usage, voice, CTA hierarchy, screenshot rules, and SEO/GEO
+guidance before adding new pages or launch assets.
+
 ## Search and GEO basics
 
 Set the canonical production URL in Vercel so metadata, Open Graph, JSON-LD,
