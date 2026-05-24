@@ -1,106 +1,49 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
 import Script from "next/script";
-import { plausibleDomain, siteDescription, siteTitle, siteUrl } from "./site";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  variable: "--font-instrument-serif",
-});
+import { canonicalUrl, defaultDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(canonicalUrl),
   title: {
-    default: siteTitle,
-    template: "%s | Yoink",
+    default: "Uoink \u2014 the YouTube layer for any AI",
+    template: "%s | Uoink",
   },
-  description: siteDescription,
-  applicationName: "Yoink",
-  authors: [{ name: "Ryan Biddy", url: "https://ryanbiddy.com" }],
-  creator: "Ryan Biddy",
-  publisher: "ReplayRyan",
-  keywords: [
-    "Yoink",
-    "ReplayRyan",
-    "YouTube transcript to AI",
-    "YouTube to Claude",
-    "YouTube to ChatGPT",
-    "YouTube to MCP",
-    "extract YouTube comments for AI",
-    "summarize YouTube playlist",
-    "YouTube hook types",
-    "AI research tool",
-    "local-first YouTube research",
-    "YouTube MCP server",
-    "Chrome extension",
-    "MCP server",
-    "Operator Skill",
-    "Yoink Memory",
-  ],
-  alternates: {
-    canonical: siteUrl,
-  },
-  icons: [
-    {
-      rel: "icon",
-      url: "/logo-mark.png",
-      sizes: "32x32",
-      type: "image/png",
-    },
-  ],
-  openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    url: siteUrl,
-    siteName: "Yoink",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Yoink turns YouTube videos into structured local corpora for LLMs and AI agents.",
-      },
+  description: defaultDescription,
+  icons: {
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+      { url: "/assets/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/favicon-16.png", sizes: "16x16", type: "image/png" },
     ],
-    locale: "en_US",
-    type: "website",
+    apple: [{ url: "/assets/apple-touch-icon-180.png", sizes: "180x180", type: "image/png" }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription,
-    images: ["/og-image.png"],
-  },
+  manifest: "/manifest.webmanifest",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Uoink",
+  applicationCategory: "ProductivityApplication",
+  operatingSystem: "Windows 10/11",
+  softwareVersion: "2.0",
+  license: "https://github.com/ryanbiddy/uoink/blob/main/LICENSE",
+  downloadUrl: "https://github.com/ryanbiddy/uoink/releases/latest",
+  url: canonicalUrl,
+  description: defaultDescription,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  sameAs: ["https://github.com/ryanbiddy/uoink", "https://ryanbiddy.com"],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable}`}
-    >
-      <body className="font-sans antialiased">
+    <html lang="en">
+      <body>
         {children}
-        {plausibleDomain ? (
-          <Script
-            defer
-            data-domain={plausibleDomain}
-            src="https://plausible.io/js/script.js"
-            strategy="afterInteractive"
-          />
-        ) : null}
+        <Script id="software-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }} />
+        <Script src="/uoink-mark.js" strategy="beforeInteractive" />
+        <Script src="/site.js" strategy="afterInteractive" />
       </body>
     </html>
   );
