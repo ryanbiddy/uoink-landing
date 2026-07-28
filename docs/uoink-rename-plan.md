@@ -2,7 +2,7 @@
 
 Source reference:
 
-- Local design file: `C:\Users\hello\Downloads\Uoink Brand System v3.html`
+- Local design file: `Uoink Brand System v3.html` (kept locally, not in this repo)
 
 ## Decision
 
